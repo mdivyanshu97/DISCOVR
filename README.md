@@ -40,6 +40,9 @@ conda install ffmpeg -c conda-forge
 # Install TorchCodec with CUDA support
 pip install torchcodec --index-url https://download.pytorch.org/whl/cu118
 
+# For more information on building TorchCodec from source, visit:
+# https://github.com/pytorch/torchcodec
+
 # Install remaining dependencies
 pip install -r requirements.txt
 ```
@@ -81,17 +84,6 @@ python -m torch.distributed.launch --nproc_per_node=NUM_GPUS \
     --warmup_epochs 40 \
     --epochs 400
 ```
-<!-- 
-### Key Parameters
-
-- `--mask_type`: Choose between 'tube' or 'multi_local' masking
-- `--loss_func`: Loss function type (SIGMA, DINO, or combined)
-- `--model`: Model architecture (default: pretrain_videomae_base_patch16_224)
-- `--batch_size`: Batch size per GPU
-- `--num_frames`: Number of frames per video clip
-- `--opt`: Optimizer (adamw recommended)
-- `--warmup_epochs`: Number of warmup epochs
-- `--epochs`: Total number of training epochs -->
 
 ## Requirements
 
@@ -123,4 +115,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - VideoMAE: [https://github.com/MCG-NJU/VideoMAE](https://github.com/MCG-NJU/VideoMAE)
 - SIGMA: [https://github.com/QUVA-Lab/SIGMA/](https://github.com/QUVA-Lab/SIGMA/)
-- DINO: [https://github.com/facebookresearch/dino](https://github.com/facebookresearch/dino) 
+- DINO: [https://github.com/facebookresearch/dino](https://github.com/facebookresearch/dino)
