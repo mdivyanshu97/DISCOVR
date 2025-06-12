@@ -1,4 +1,4 @@
-# DISCOVR: Self-supervised Learning of Echocardiographic Video Representations
+# DISCOVR: Self-supervised Learning of Echocardiographic Video Representations via Online Cluster Distillation
 
 [[Paper](https://arxiv.org/abs/XXXX.XXXXX)] [[Code](https://github.com/yourusername/discovr)]
 
