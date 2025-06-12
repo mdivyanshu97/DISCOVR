@@ -17,10 +17,10 @@ DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a 
 - **Temporally Coherent Representations**: Enables rich semantic understanding while maintaining temporal coherence
 - **Domain-Specific Design**: Specifically optimized for echocardiographic video analysis
 - **Robust to Ultrasound Challenges**: Handles high intersample similarity and low PSNR inputs common in ultrasound
-- **Extensive Evaluation**: Validated across diverse patient populations (fetal, pediatric, and adult) and multiple clinical tasks:
-  - **Segmentation**: Achieves state-of-the-art performance on CAMUS dataset with Dice score of 0.844
-  - **Zero-Shot Classification**: Best performance on Echonet Dynamic (F1: 61.45) and FetalEcho (F1: 61.79)
-  - **Anomaly Detection**: Superior ability to detect subtle cardiac structures and abnormalities
+- **Extensive Evaluation**: 
+  - Validated across fetal, pediatric, and adult populations
+  - Evaluated on zero-shot and linear probing, video anomaly detection, and cardiac segmentation tasks
+  - Compared against baselines from video anomaly detection, video SSL, and specialized segmentation architectures
 
 ## Installation
 
