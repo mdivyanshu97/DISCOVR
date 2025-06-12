@@ -17,34 +17,10 @@ DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a 
 - **Temporally Coherent Representations**: Enables rich semantic understanding while maintaining temporal coherence
 - **Domain-Specific Design**: Specifically optimized for echocardiographic video analysis
 - **Robust to Ultrasound Challenges**: Handles high intersample similarity and low PSNR inputs common in ultrasound
-- **Extensive Evaluation**: Validated on 6 large-scale echocardiographic datasets spanning fetal, pediatric, and adult populations
-- **State-of-the-Art Performance**: Achieves superior results across multiple tasks:
-  - **Segmentation**: Highest Dice score of 0.844 on CAMUS dataset, outperforming specialized architectures (UNet, DeepLabV3) and other SSL methods
-  - **Zero-Shot Classification**: Best balanced accuracy and F1 scores across all echocardiography datasets:
-    - Echonet Dynamic: F1 of 61.45 (vs 57.56 baseline)
-    - FetalEcho 1: F1 of 61.79 (vs 60.64 baseline)
-  - **Anomaly Detection**: Superior performance in detecting subtle cardiac structures and abnormalities
-
-## Performance Highlights
-
-### Segmentation Performance
-- DISCOVR achieves Dice score of 0.844, outperforming:
-  - Specialized architectures: UNet (0.816), DeepLabV3 (0.819)
-  - SSL-based video models: VideoMAE (0.747), MGMAE (0.767), SIGMA (0.759)
-- Superior performance on challenging structures:
-  - Left atrium segmentation: Dice = 0.90 (vs 0.01 for MGMAE, 0.30 for SIGMA, 0.56 for VideoMAE)
-
-### Zero-Shot Classification
-- Best performance across all evaluated datasets:
-  - Echonet Dynamic: F1 = 61.45, Balanced Accuracy = 63.20%
-  - FetalEcho 1: F1 = 61.79
-- Consistent improvements across fetal, pediatric, and adult cardiac cohorts
-
-### Ablation Studies
-- **Loss Components**: Combined Lvid_ssl and LSCD achieves F1 = 61.45% (vs 48.23% with Lvid_ssl alone)
-- **Backbone Size**: ViT-Base (F1=61.45%) outperforms ViT-Small (F1=57.52%)
-- **Temporal Length**: Best performance with 64 frames (F1=61.45%)
-- **Masking Ratio**: Optimal performance with 90% masking (F1=61.45%)
+- **Extensive Evaluation**: Validated across diverse patient populations (fetal, pediatric, and adult) and multiple clinical tasks:
+  - **Segmentation**: Achieves state-of-the-art performance on CAMUS dataset with Dice score of 0.844
+  - **Zero-Shot Classification**: Best performance on Echonet Dynamic (F1: 61.45) and FetalEcho (F1: 61.79)
+  - **Anomaly Detection**: Superior ability to detect subtle cardiac structures and abnormalities
 
 ## Installation
 
