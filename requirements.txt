@@ -33,6 +33,7 @@ keras==3.9.2
 kiwisolver==1.4.8
 lazy_loader==0.4
 libclang==18.1.1
+lightning==2.5.0.post0
 lightning-utilities==0.12.0
 Markdown==3.8
 markdown-it-py==3.0.0
@@ -95,8 +96,9 @@ tensorflow-io-gcs-filesystem
 termcolor==3.1.0
 threadpoolctl==3.6.0
 tifffile==2025.3.30
-timm==1.0.15
+timm==0.4.12
 tokenizers==0.21.1
+torchmetrics
 tqdm==4.66.2
 transformers==4.50.2
 triton==3.2.0
