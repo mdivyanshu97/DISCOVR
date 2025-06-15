@@ -15,7 +15,7 @@ import numbers
 import PIL
 import torchvision
 
-# import discovr.data.transforms.functional as FF
+import discovr.data.transforms.functional as FF
 
 _pil_interpolation_to_str = {
     Image.NEAREST: "PIL.Image.NEAREST",

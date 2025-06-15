@@ -1,17 +1,24 @@
 #!/bin/bash
 
+# Initialize conda
+eval "$(conda shell.bash hook)"
+conda activate discovr
+
+# Load CUDA
+ml cuda/11.8
+
 # Set paths
 DATA_PATH="/data/biomedia1/ssl_resized_224_cropped_12_March"
 DATA_PATH_CSV="/data/biomedia1/ssl_split_csv_files/ssl_split_csv_files/site_01_train_21_March.csv"
 DATA_PATH_CSV_VAL="/data/biomedia1/ssl_split_csv_files/ssl_split_csv_files/site_01_val_21_March.csv"
 DATA_PATH_CSV_TEST="/data/biomedia1/ssl_split_csv_files/ssl_split_csv_files/site_01_test_21_March.csv"
-OUTPUT_DIR="/data/biomedia1/discovr/results/DISCOVR_PRETRAIN_SITE_01"
+OUTPUT_DIR="/data/biomedia1/discovr/code/discovr/results/DISCOVR_PRETRAIN_SITE_01"
 
 # Add code to PYTHONPATH
 export PYTHONPATH=$PYTHONPATH:/data/biomedia1/discovr/code
 
 # Run training
-OMP_NUM_THREADS=1 python -m torch.distributed.launch --nproc_per_node=1 \
+OMP_NUM_THREADS=1 python -m torch.distributed.launch --nproc_per_node=4 \
         --master_port 12000 /data/biomedia1/discovr/code/discovr/scripts/run_mae_pretraining.py \
         --data_path ${DATA_PATH} \
         --data_path_csv ${DATA_PATH_CSV} \
@@ -40,7 +47,7 @@ OMP_NUM_THREADS=1 python -m torch.distributed.launch --nproc_per_node=1 \
         --sinkhorn_iterations 10 \
         --augmentation multi_scale_crop \
         --tokenizer_type default \
-        --num_workers 8 \
+        --num_workers 4 \
         --use_torchcodec \
         --dino_out_dim 16384 \
         --use_combined_dino_swav \
