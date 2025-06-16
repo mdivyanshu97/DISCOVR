@@ -1,6 +1,6 @@
 # DISCOVR: Self-supervised Learning of Echocardiographic Video Representations via Online Cluster Distillation
 
-[[Paper](https://arxiv.org/abs/XXXX.XXXXX)] [[Code](https://github.com/yourusername/discovr)]
+[[Paper](https://arxiv.org/abs/2506.11777)] 
 
 DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a self-supervised dual branch framework for cardiac ultrasound video representation learning. It addresses the unique challenges in echocardiography by combining temporal dynamics modeling with fine-grained spatial semantics extraction.
 
