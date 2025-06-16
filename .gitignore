@@ -4,6 +4,7 @@
 
 # Exclude results directory (including all subfolders and files)
 results/
-
+**/results
 # Exclude wandb logs and runs (including all subfolders and files)
-wandb/ 
+wandb/
+**/wandb/ 
