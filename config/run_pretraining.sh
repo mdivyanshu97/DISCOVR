@@ -8,18 +8,18 @@ conda activate discovr
 ml cuda/11.8
 
 # Set paths
-DATA_PATH="/data/biomedia1/ssl_resized_224_cropped_12_March"
-DATA_PATH_CSV="/data/biomedia1/ssl_split_csv_files/ssl_split_csv_files/site_01_train_21_March.csv"
-DATA_PATH_CSV_VAL="/data/biomedia1/ssl_split_csv_files/ssl_split_csv_files/site_01_val_21_March.csv"
-DATA_PATH_CSV_TEST="/data/biomedia1/ssl_split_csv_files/ssl_split_csv_files/site_01_test_21_March.csv"
-OUTPUT_DIR="/data/biomedia1/discovr/code/discovr/results/DISCOVR_PRETRAIN_SITE_01"
+DATA_PATH="Path to Videos"
+DATA_PATH_CSV="Path to Train CSV"
+DATA_PATH_CSV_VAL="Path to Val CSV"
+DATA_PATH_CSV_TEST="Path to Test CSV"
+OUTPUT_DIR="Path to Output"
 
 # Add code to PYTHONPATH
-export PYTHONPATH=$PYTHONPATH:/data/biomedia1/discovr/code
+export PYTHONPATH=$PYTHONPATH:Path to Code
 
 # Run training
 OMP_NUM_THREADS=1 python -m torch.distributed.launch --nproc_per_node=4 \
-        --master_port 12000 /data/biomedia1/discovr/code/discovr/scripts/run_mae_pretraining.py \
+        --master_port 12000 scripts/run_mae_pretraining.py \
         --data_path ${DATA_PATH} \
         --data_path_csv ${DATA_PATH_CSV} \
         --data_path_val ${DATA_PATH_CSV_VAL} \
