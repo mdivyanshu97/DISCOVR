@@ -12,6 +12,7 @@ wandb/
 
 # Ignore Python cache directories
 __pycache__/
+**/__pycache__/
 
 # Ignore SLURM output files
 slurm-* 
