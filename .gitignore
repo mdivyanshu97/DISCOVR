@@ -5,6 +5,13 @@
 # Exclude results directory (including all subfolders and files)
 results/
 **/results
-# Exclude wandb logs and runs (including all subfolders and files)
+
+# Exclude all wandb logs and runs (at any depth)
 wandb/
-**/wandb/ 
+**/wandb/
+
+# Ignore Python cache directories
+__pycache__/
+
+# Ignore SLURM output files
+slurm-* 
