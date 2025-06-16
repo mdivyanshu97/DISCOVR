@@ -1,0 +1,9 @@
+# Exclude model checkpoint files
+*.pth
+*.pt
+
+# Exclude results directory (including all subfolders and files)
+results/
+
+# Exclude wandb logs and runs (including all subfolders and files)
+wandb/ 
