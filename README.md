@@ -1,4 +1,4 @@
-# DISCOVR: Self-supervised Learning of Echocardiographic Video Representations via Online Cluster Distillation
+# DISCOVR: Self-supervised Learning of Echocardiographic Video Representations via Online Cluster Distillation (Accepted to NeurIPS 2025)
 
 [[Paper](https://arxiv.org/abs/2506.11777)] 
 
