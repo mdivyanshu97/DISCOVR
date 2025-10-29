@@ -1,6 +1,6 @@
 # DISCOVR: Self-supervised Learning of Echocardiographic Video Representations via Online Cluster Distillation (NeurIPS 2025)
 
-[[Paper](https://arxiv.org/abs/2506.11777)]  [![Model on Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/Div97/DISCOVR_399_Adult_Pediatric)
+[[Paper](https://arxiv.org/abs/2506.11777)]  [![arXiv](https://img.shields.io/badge/arXiv-2506.11777-b31b1b.svg)](https://arxiv.org/abs/2506.11777)
 
 DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a self-supervised dual branch framework for cardiac ultrasound video representation learning. It addresses the unique challenges in echocardiography by combining temporal dynamics modeling with fine-grained spatial semantics extraction.
 
@@ -69,7 +69,7 @@ discovr/
 
 ### Pretrained Checkpoints
 
-W
+We  release checkpoints trained on different datasets and also release Intermediate checkpoints (coming soon).
 #### Training Details
 
 | Model | Epochs Trained | FetalEcho1 | FetalEcho2 | EchoNet Dynamic | EchoPediatric LVH | RVENet |
