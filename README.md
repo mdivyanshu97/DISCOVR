@@ -65,6 +65,20 @@ discovr/
 └── setup.py          # Package installation file
 ```
 
+## Model Card
+
+### Pretrained Checkpoints
+
+We provide pretrained model checkpoints trained for 400 epochs:
+
+- **DISCOVR (400 epochs)**: [Download checkpoint](https://huggingface.co/Div97/DISCOVR_399_Adult_Pediatric)
+
+#### Training Details
+
+| Model | Epochs Trained | FetalEcho1 | FetalEcho2 | EchoNet Dynamic | EchoPediatric LVH | RVENet |
+|-------|----------------|------------|------------|------------------|-------------------|--------|
+| [DISCOVR](https://huggingface.co/Div97/DISCOVR_399_Adult_Pediatric) | 400 | x | x | ✓ | ✓ | ✓ |
+
 ## Usage
 
 ### Pretraining
