@@ -78,7 +78,9 @@ We release checkpoints trained on adult and pediatric echocardiography datasets 
 | [DISCOVR-200](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-199.pth) | 200 | x | x | ✓ | ✓ | ✓ |
 | [DISCOVR-300](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-299.pth) | 300 | x | x | ✓ | ✓ | ✓ |
 | [DISCOVR-400](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-399.pth) | 400 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-500](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-499.pth) | 500 | x | x | ✓ | ✓ | ✓ |
 | [DISCOVR-600](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-599.pth) | 600 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-700](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-699.pth) | 700 | x | x | ✓ | ✓ | ✓ |
 | [DISCOVR-800](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-799.pth) | 800 | x | x | ✓ | ✓ | ✓ |
 
 ## Usage
