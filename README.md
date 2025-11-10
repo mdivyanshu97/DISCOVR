@@ -1,6 +1,6 @@
 # DISCOVR: Self-supervised Learning of Echocardiographic Video Representations via Online Cluster Distillation (NeurIPS 2025)
 
- [![arXiv](https://img.shields.io/badge/arXiv-2506.11777-b31b1b.svg)](https://arxiv.org/abs/2506.11777)  [![Model on Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/Div97/DISCOVR_399_Adult_Pediatric)
+ [![arXiv](https://img.shields.io/badge/arXiv-2506.11777-b31b1b.svg)](https://arxiv.org/abs/2506.11777)  [![Model on Hugging Face](https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface)](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL)
 
 DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a self-supervised dual branch framework for cardiac ultrasound video representation learning. It addresses the unique challenges in echocardiography by combining temporal dynamics modeling with fine-grained spatial semantics extraction.
 
@@ -69,12 +69,17 @@ discovr/
 
 ### Pretrained Checkpoints
 
-We  release checkpoints trained on different datasets and also release Intermediate checkpoints (coming soon).
+We release checkpoints trained on adult and pediatric echocardiography datasets (EchoNet Dynamic, EchoPediatric LVH, RVENet) at different training stages.
+
 #### Training Details
 
 | Model | Epochs Trained | FetalEcho1 | FetalEcho2 | EchoNet Dynamic | EchoPediatric LVH | RVENet |
 |-------|----------------|------------|------------|------------------|-------------------|--------|
-| [DISCOVR](https://huggingface.co/Div97/DISCOVR_399_Adult_Pediatric) | 400 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-200](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-199.pth) | 200 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-300](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-299.pth) | 300 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-400](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-399.pth) | 400 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-600](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-599.pth) | 600 | x | x | ✓ | ✓ | ✓ |
+| [DISCOVR-800](https://huggingface.co/Div97/DISCOVR_ADULT_PEDIATRIC_MODEL/blob/main/checkpoint-799.pth) | 800 | x | x | ✓ | ✓ | ✓ |
 
 ## Usage
 
