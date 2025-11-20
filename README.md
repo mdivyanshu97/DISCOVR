@@ -26,7 +26,7 @@ DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/discovr.git
+git clone https://github.com/mdivyanshu97/DISCOVR.git
 cd discovr
 ```
 
@@ -106,6 +106,28 @@ python -m torch.distributed.launch --nproc_per_node=NUM_GPUS \
     --warmup_epochs 40 \
     --epochs 400
 ```
+
+### Using the pretrained encoder for inference
+
+After pretraining (or using any of the checkpoints listed in the *Pretrained Checkpoints* table above), you can load the DISCOVR video encoder and run inference using the helper script `run_discovr_encoder.py`:
+
+```bash
+cd /path/to/discovr
+
+python run_discovr_encoder.py \
+  --checkpoint /path/to/checkpoint-799.pth \
+  --num_frames 64 \
+  --batch_size 2 \
+  --device cuda
+```
+
+This script:
+- Instantiates the DISCOVR pretraining architecture with the correct configuration
+- Loads the checkpoint weights
+- Selects the `video_teacher` branch when available
+- Runs a dummy video tensor through the encoder and prints the CLS token feature shape
+
+You can adapt this script to replace the dummy input with your own preprocessed echocardiography videos and to save the extracted features to disk.
 
 ## Requirements
 

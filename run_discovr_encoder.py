@@ -57,8 +57,8 @@ def main():
     parser.add_argument(
         "--repo-root",
         type=Path,
-        default=Path("/well/noble/users/xpx456/codes"),
-        help="Root directory that contains the DISCOVR repo (default: Sigma project root).",
+        default=Path("."),
+        help="Root directory that contains the DISCOVR repo (default: current directory).",
     )
     parser.add_argument(
         "--checkpoint",
@@ -72,7 +72,7 @@ def main():
     parser.add_argument(
         "--checkpoint-file",
         type=Path,
-        default=Path("/well/noble/users/xpx456/codes/sigma_with_image/Sigma_with_image_dino/results/DISCOVR_COMBINED_ADULT_RERUN_800_EPOCHS/checkpoint-799.pth"),
+        default=Path("path/to/checkpoint-799.pth"),
         help="Checkpoint path relative to --repo-root when --checkpoint is not set.",
     )
     args = parser.parse_args()
