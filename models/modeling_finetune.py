@@ -6,8 +6,8 @@ import torch.nn.functional as F
 from timm.models.layers import drop_path, to_2tuple, trunc_normal_
 from timm.models.registry import register_model
 import torch.utils.checkpoint as checkpoint
-from discovr.models.TubeViT.tubevit.model import SparseTubesTokenizer
-from discovr.models.TubeViT.tubevit.positional_encoding import get_3d_sincos_pos_embed
+from models.TubeViT.tubevit.model import SparseTubesTokenizer
+from models.TubeViT.tubevit.positional_encoding import get_3d_sincos_pos_embed
 
 
 def _cfg(url='', **kwargs):

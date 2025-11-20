@@ -4,15 +4,15 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.checkpoint as checkpoint
 from functools import partial
-from discovr.utils import utils
-from discovr.models.modeling_finetune import Block, _cfg, PatchEmbed, get_sinusoid_encoding_table
+from utils import utils
+from models.modeling_finetune import Block, _cfg, PatchEmbed, get_sinusoid_encoding_table
 from timm.models.registry import register_model
 from timm.models.layers import trunc_normal_ as __call_trunc_normal_
-from discovr.models.attn_mask import create_binary_kk_attention_mask_2d
+from models.attn_mask import create_binary_kk_attention_mask_2d
 import copy
 import torch.distributed as dist
-from discovr.models.TubeViT.tubevit.model import SparseTubesTokenizer
-from discovr.models.TubeViT.tubevit.positional_encoding import get_3d_sincos_pos_embed
+from models.TubeViT.tubevit.model import SparseTubesTokenizer
+from models.TubeViT.tubevit.positional_encoding import get_3d_sincos_pos_embed
 import numpy as np
 from einops import rearrange
 
@@ -1355,6 +1355,7 @@ def create_teacher_model(student):
 def pretrain_videomae_small_patch16_224(pretrained=False, **kwargs):
     input_size = kwargs.pop('input_size', 224)
     grayscale_mode = kwargs.pop('grayscale_mode', False)
+    qkv_bias = kwargs.pop('qkv_bias', False)
     model = PretrainVisionTransformer(
         patch_size=16,
         encoder_embed_dim=384,
@@ -1363,7 +1364,7 @@ def pretrain_videomae_small_patch16_224(pretrained=False, **kwargs):
         decoder_embed_dim=192, 
         decoder_num_heads=3,
         mlp_ratio=4,
-        qkv_bias=True,
+        qkv_bias=qkv_bias,
         norm_layer=partial(nn.LayerNorm, eps=1e-6),
         img_size=input_size,
         grayscale_mode=grayscale_mode,
@@ -1380,6 +1381,7 @@ def pretrain_videomae_small_patch16_224(pretrained=False, **kwargs):
 @register_model
 def pretrain_videomae_base_patch16_224(pretrained=False, **kwargs):
     grayscale_mode = kwargs.pop('grayscale_mode', False)
+    qkv_bias = kwargs.pop('qkv_bias', True)
     model = PretrainVisionTransformer(
         patch_size=16, 
         encoder_embed_dim=768, 
@@ -1389,7 +1391,7 @@ def pretrain_videomae_base_patch16_224(pretrained=False, **kwargs):
         decoder_embed_dim=384,
         decoder_num_heads=6,
         mlp_ratio=4, 
-        qkv_bias=True,
+        qkv_bias=qkv_bias,
         norm_layer=partial(nn.LayerNorm, eps=1e-6), 
         grayscale_mode=grayscale_mode,
         **kwargs)
