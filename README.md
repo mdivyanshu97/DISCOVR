@@ -27,7 +27,7 @@ DISCOVR (Distilled Image Supervision for Cross Modal Video Representation) is a 
 1. Clone the repository:
 ```bash
 git clone https://github.com/mdivyanshu97/DISCOVR.git
-cd discovr
+cd DISCOVR
 ```
 
 2. Create a conda environment and install dependencies:
@@ -112,7 +112,7 @@ python -m torch.distributed.launch --nproc_per_node=NUM_GPUS \
 After pretraining (or using any of the checkpoints listed in the *Pretrained Checkpoints* table above), you can load the DISCOVR video encoder and run inference using the helper script `run_discovr_encoder.py`:
 
 ```bash
-cd /path/to/discovr
+cd /path/to/DISCOVR
 
 python run_discovr_encoder.py \
   --checkpoint /path/to/checkpoint-799.pth \
